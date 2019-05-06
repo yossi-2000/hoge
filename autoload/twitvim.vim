@@ -679,7 +679,7 @@ function! s:switch_token(name, service)
         let s:access_token_secret = tokenrec.secret
         let s:cached_username = tokenrec.name
         redraw
-        echo "Logged in as ".s:cached_username." on ".s:get_svc_disp_name()."."
+        echo "Logged in as ".s:cached_username." on ".s:get_svc_disp_name()."." " jpjpge
     endif
 endfunction
 
@@ -2304,7 +2304,7 @@ endfunction
 function! s:CmdLine_Twitter(initstr, inreplyto)
     call inputsave()
     redraw
-    let mesg = input(s:get_twitvim_username()."Tweet: ", a:initstr)
+    let mesg = input(s:cached_username."Tweet: ", a:initstr) "hogehoge
     call inputrestore()
     call s:post_twitter(mesg, a:inreplyto)
 endfunction
