@@ -2305,7 +2305,7 @@ function! s:CmdLine_Twitter(initstr, inreplyto)
     call inputsave()
     redraw
     echo "hoge"
-    let username = s:get_twitvim_cached_username()
+    let username = s:get_twitvim_username()
     echo username
     let mesg = input("Tweet: ", a:initstr)
     call inputrestore()
