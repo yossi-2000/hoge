@@ -2304,7 +2304,7 @@ endfunction
 function! s:CmdLine_Twitter(initstr, inreplyto)
     call inputsave()
     redraw
-    let mesg = input("Tweet: ", a:initstr)
+    let mesg = input("aTweet: ", a:initstr)
     call inputrestore()
     call s:post_twitter(mesg, a:inreplyto)
 endfunction
