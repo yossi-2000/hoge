@@ -2305,8 +2305,8 @@ function! s:CmdLine_Twitter(initstr, inreplyto)
     call inputsave()
     redraw
     echo "hoge"
-    echo substitute(s:curbuffer.buffer[line('.')-1], ':.*', '', '')
-    let mesg = input(s:cached_username."Tweet: ", a:initstr)
+    echo s:get_twitvim_cached_username()
+    let mesg = input("Tweet: ", a:initstr)
     call inputrestore()
     call s:post_twitter(mesg, a:inreplyto)
 endfunction
