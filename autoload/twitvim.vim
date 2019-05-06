@@ -2304,6 +2304,7 @@ endfunction
 function! s:CmdLine_Twitter(initstr, inreplyto)
     call inputsave()
     redraw
+    echo hoge
     echo s:cached_username
     let mesg = input(s:cached_username."Tweet: ", a:initstr)
     call inputrestore()
